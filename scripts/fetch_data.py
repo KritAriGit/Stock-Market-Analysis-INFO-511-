@@ -10,7 +10,7 @@ endD = '2025-01-01'
 def get_stock(x):
     print(f"Fetching for {x}...")
     data = yf.download(x, start = startD, end = endD)
-    file_path = f"data/raw/{x}_stock_data.csv"
+    file_path = f"data/raw data/{x}_stock_data.csv"
     data.to_csv(file_path)
     print(f"Saved to {file_path}")
 
