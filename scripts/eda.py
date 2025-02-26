@@ -18,7 +18,7 @@ for x in tickers:
         
         # Rename columns properly
         df.columns = ['Date', 'Close', 'High', 'Low', 'Open', 'Volume']
-        df['Date'] = pd.to_datetime(df['Date'])                                                 # Convert Date column to datetime
+        df['Date'] = pd.to_datetime(df['Date'])                                                 # Converting Date column to datetime
         df.set_index('Date', inplace = True)                                                    # Setting Date to index
         
         stocks[x] = df
@@ -26,36 +26,36 @@ for x in tickers:
     else:
         print(f"Data file is missing for {x}: {file_path}")
 
-# Just for Verification
+# # Just for Verification
 
-print(stocks['AAPL'].head())  
+# print(stocks['AAPL'].head())
 
 # Exploratory Data Analysis (EDA)
 
 # for x, df in stocks.items():
-#     print(f"\nEDA for {x}:")
-#     print(df.describe())  # Summary statistics
-#     print(df.info())  # Data types and missing values
+#     print(f"\nEDA for {x} : \n")
+#     print(df.describe())  
+#     print(df.info())  
 #     print(f"Missing values :\n{df.isnull().sum()}")
 
-# # Plot stock price trends
 
-# plt.figure(figsize = (12, 6))
+# Plot stock price trends
 
-# for ticker, df in stocks.items():
-#     plt.plot(df.index, df['Adj Close'], label=ticker)
+plt.figure(figsize = (12, 6))
 
-# plt.legend()
-# plt.title("Stock Price Trends (Adj Close)")
-# plt.xlabel("Date")
-# plt.ylabel("Adjusted Close Price")
-# plt.grid()
-# plt.show()
+for x, df in stocks.items():
+    plt.plot(df.index, df['Close'], label = x)
 
-# # to chech missing values visually
-# missing_values = {ticker: df.isnull().sum().sum() for ticker, df in stocks.items()}
-# print("Total Missing Values:", missing_values)
+plt.legend()
+plt.title("Stock Price Trends (Close)")
+plt.xlabel("Year")
+plt.ylabel("Close Price")
+plt.grid()
+plt.show()
 
-# sns.heatmap(pd.DataFrame(missing_values, index = ["Missing Values"]), annot = True, cmap='coolwarm')
-# plt.title("Missing Data Heatmap")
-# plt.show()
+# to chech missing values visually
+
+plt.figure(figsize=(12, 6))
+sns.heatmap(pd.concat({ticker: df.isnull().sum() for ticker, df in stocks.items()}, axis=1), annot=True, cmap = 'coolwarm', cbar = True)
+plt.title("Missing Data Heatmap for All Stocks")
+plt.show()
