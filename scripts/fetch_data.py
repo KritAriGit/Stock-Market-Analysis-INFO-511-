@@ -1,4 +1,4 @@
-# Script to fectch raw data from yahoo finance (yfinance)
+# ------------- Script to fectch raw data from yahoo finance (yfinance) -------------------
 
 import yfinance as yf
 import pandas as pd

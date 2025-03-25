@@ -2,7 +2,7 @@ Stock Market Analysis: Post-COVID Trends & NVIDIA Event Impact
 
 📌 Overview
 
-This project focuses on the aspects of Data Management in Data Science, diving into the stock trends of Tech and Finance giants (i.e. companies / corporations).
+This project focuses on the aspects of Data Management and Visualisation in Data Science, diving into the stock trends of Tech and Finance giants (i.e. companies / corporations).
 
 👔 Team Members
 
@@ -64,4 +64,5 @@ Open Jupyter notebooks in the /notebooks/ directory to analyze and visualize tre
 
 This project makes use of the data from Yahoo finance, which is publicaly available and furthurmore does not require any special permissions.
 
-📌 Author: [Your Name]📅 Last Updated: [Date]🔗 Project Status: In Progress
+
+📅 Last Updated: [Date]🔗 Project Status: In Progress

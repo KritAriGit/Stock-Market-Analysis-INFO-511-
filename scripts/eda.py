@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
-tickers = ['NVDA', 'AAPL', 'TSLA', 'JPM', 'GS']                                                 #tickers = symbols for stocks
+tickers = ['NVDA', 'AAPL', 'TSLA', 'JPM', 'GS']                                                 #again - tickers = symbols for stocks
 raw_data_path = "data/raw data/"
 
 # Load stock data
@@ -26,7 +26,7 @@ for x in tickers:
     else:
         print(f"Data file is missing for {x}: {file_path}")
 
-# # Just for Verification
+# # ------------ Just for Verification ignore this part ----------------
 
 # print(stocks['AAPL'].head())
 
@@ -38,6 +38,7 @@ for x in tickers:
 #     print(df.info())  
 #     print(f"Missing values :\n{df.isnull().sum()}")
 
+# ------------------------------------------------------------------------
 
 # Plot stock price trends
 
@@ -53,7 +54,7 @@ plt.ylabel("Close Price")
 plt.grid()
 plt.show()
 
-# to chech missing values visually
+# to check missing values visually
 
 plt.figure(figsize=(12, 6))
 sns.heatmap(pd.concat({ticker: df.isnull().sum() for ticker, df in stocks.items()}, axis=1), annot=True, cmap = 'coolwarm', cbar = True)
