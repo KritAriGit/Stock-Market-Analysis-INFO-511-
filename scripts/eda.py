@@ -16,10 +16,10 @@ for x in tickers:
     if os.path.exists(file_path):
         df = pd.read_csv(file_path, skiprows = 2)                                               # Skipping first two rows, due to csv structure
         
-        # Rename columns properly
+        # Renaming columns
         df.columns = ['Date', 'Close', 'High', 'Low', 'Open', 'Volume']
-        df['Date'] = pd.to_datetime(df['Date'])                                                 # Converting Date column to datetime
-        df.set_index('Date', inplace = True)                                                    # Setting Date to index
+        df['Date'] = pd.to_datetime(df['Date'])                                                 # Converting Date to datetime
+        df.set_index('Date', inplace = True)                                                    # Setting Date as index
         
         stocks[x] = df
         print(f"Data loaded successfully for {x}")
