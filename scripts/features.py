@@ -1,7 +1,8 @@
 
 # ------------------------- Feature Engineering -------------------------
-# This scripts reads raw stock data, processes it to calculate daily returns, moving averages (30 & 100), and 30-day volatility, 
+# This script should read raw stock data, process it to calculate daily returns, moving averages (30 & 100), and 30-day volatility, 
 # and saves the processed datasets to the processed folder.
+# if not then           sad....      - KS
 
 
 
@@ -50,3 +51,5 @@ for ticker in tickers:
     process_stock_data(ticker)
 
 print("\nFeature engineering done.")
+
+
