@@ -40,7 +40,7 @@ for x in tickers:
 
 # ------------------------------------------------------------------------
 
-# Plot stock price trends
+#  stock price trends plot 
 
 plt.figure(figsize = (12, 6))
 
@@ -54,7 +54,7 @@ plt.ylabel("Close Price")
 plt.grid()
 plt.show()
 
-# to check missing values visually
+# missing values visual
 
 plt.figure(figsize=(12, 6))
 sns.heatmap(pd.concat({ticker: df.isnull().sum() for ticker, df in stocks.items()}, axis=1), annot=True, cmap = 'coolwarm', cbar = True)
