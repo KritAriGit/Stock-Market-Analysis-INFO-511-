@@ -6,9 +6,9 @@ This project focuses on the aspects of Data Management and Visualisation in Data
 
 👔 Team Members
 
-o Kritvirya Singh - @KritAriGit
-o Mokshagna Gnana Teja Talapaneni - (update gitid)
-o Akhila Myaka - (update gitid)
+- Kritvirya Singh : @KritAriGit
+- Mokshagna Gnana Teja Talapaneni : (update gitid)
+- Akhila Myaka : (update gitid)
 
 🎯 Research Questions
 
