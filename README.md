@@ -24,13 +24,13 @@ Finance Sector: JPMorgan Chase (JPM), Goldman Sachs (GS)
 
 📂 Project Structure
 
-stock-market-analysis/
-├── data/
-│   ├── raw/         # Raw stock data CSVs
-│   ├── processed/   # Cleaned & transformed data
-├── notebooks/       # Jupyter notebooks for analysis
-├── scripts/         # Data fetching & processing scripts
-├── README.md        # Project documentation
+- stock-market-analysis/
+-- ├── data/
+-- │   ├── raw/         # Raw stock data CSVs
+-- │   ├── processed/   # Cleaned & transformed data
+-- ├── notebooks/       # Jupyter notebooks for analysis
+-- ├── scripts/         # Data fetching & processing scripts
+-- ├── README.md        # Project documentation
 
 🔍 Methods & Approach
 
