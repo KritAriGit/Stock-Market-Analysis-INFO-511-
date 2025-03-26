@@ -60,3 +60,7 @@ plt.figure(figsize=(12, 6))
 sns.heatmap(pd.concat({ticker: df.isnull().sum() for ticker, df in stocks.items()}, axis=1), annot=True, cmap = 'coolwarm', cbar = True)
 plt.title("Missing Data Heatmap for All Stocks")
 plt.show()
+
+
+
+# All the scripts need to be properly commented, remove unecessary or excess comments and documented
