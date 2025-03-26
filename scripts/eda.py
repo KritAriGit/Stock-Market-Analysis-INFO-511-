@@ -18,27 +18,13 @@ for x in tickers:
         
         # Renaming columns
         df.columns = ['Date', 'Close', 'High', 'Low', 'Open', 'Volume']
-        df['Date'] = pd.to_datetime(df['Date'])                                                 # Converting Date to datetime
-        df.set_index('Date', inplace = True)                                                    # Setting Date as index
+        df['Date'] = pd.to_datetime(df['Date'])                                                 # Date to datetime
+        df.set_index('Date', inplace = True)                                                    # Date as index
         
         stocks[x] = df
         print(f"Data loaded successfully for {x}")
     else:
         print(f"Data file is missing for {x}: {file_path}")
-
-# # ------------ Just for Verification ignore this part ----------------
-
-# print(stocks['AAPL'].head())
-
-# Exploratory Data Analysis (EDA)
-
-# for x, df in stocks.items():
-#     print(f"\nEDA for {x} : \n")
-#     print(df.describe())  
-#     print(df.info())  
-#     print(f"Missing values :\n{df.isnull().sum()}")
-
-# ------------------------------------------------------------------------
 
 #  stock price trends plot 
 
