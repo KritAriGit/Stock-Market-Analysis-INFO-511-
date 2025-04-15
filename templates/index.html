@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Market Analysis - NVDA</title>
+</head>
+<body>
+    <h1>Stock Market Analysis - NVDA</h1>
+
+    <div>
+        <h2>1. Close Price vs Moving Averages</h2>
+        {{ graph_ma|safe }}
+    </div>
+
+    <div>
+        <h2>2. 30-Day Rolling Volatility</h2>
+        {{ graph_volatility|safe }}
+    </div>
+
+    <div>
+        <h2>3. Daily Return Over Time</h2>
+        {{ graph_return|safe }}
+    </div>
+
+    <div>
+        <h2>4. Volume vs Close Price</h2>
+        {{ graph_volume|safe }}
+    </div>
+
+    <div>
+        <h2>5. High-Low Spread Over Time</h2>
+        {{ graph_spread|safe }}
+    </div>
+
+    <div>
+        <h2>6. Histogram of Daily Returns</h2>
+        {{ graph_hist|safe }}
+    </div>
+</body>
+</html>
