@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Stock Market Analysis - NVDA</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #eef2f5;
+            color: #2c3e50;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+            letter-spacing: 1px;
+        }
+
+        .content {
+            padding: 30px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .chart-container {
+            background-color: #ffffff;
+            padding: 25px;
+            margin-bottom: 30px;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .chart-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .chart-container h2 {
+            margin-top: 0;
+            color: #2a5298;
+            font-size: 1.5em;
+            border-bottom: 2px solid #e1e5eb;
+            padding-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #2a5298;
+            color: white;
+            font-size: 0.9em;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .chart-container {
+                padding: 20px;
+            }
+
+            .chart-container h2 {
+                font-size: 1.2em;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Stock Market Analysis - NVDA</h1>
+    </header>
+
+    <div class="content">
+        <div class="chart-container">
+            <h2>1. Close Price vs Moving Averages</h2>
+            {{ graph_ma|safe }}
+        </div>
+
+        <div class="chart-container">
+            <h2>2. 30-Day Rolling Volatility</h2>
+            {{ graph_volatility|safe }}
+        </div>
+
+        <div class="chart-container">
+            <h2>3. Daily Return Over Time</h2>
+            {{ graph_return|safe }}
+        </div>
+
+        <div class="chart-container">
+            <h2>4. Volume vs Close Price</h2>
+            {{ graph_volume|safe }}
+        </div>
+
+        <div class="chart-container">
+            <h2>5. High-Low Spread Over Time</h2>
+            {{ graph_spread|safe }}
+        </div>
+
+        <div class="chart-container">
+            <h2>6. Histogram of Daily Returns</h2>
+            {{ graph_hist|safe }}
+        </div>
+    </div>
+
+    <footer>
+        &copy; 2025 NVDA Stock Analysis. Built with Flask + Plotly.
+    </footer>
+
+</body>
+</html>

@@ -6,9 +6,9 @@ This project focuses on the aspects of Data Management and Visualisation in Data
 
 👔 Team Members
 
-o Kritvirya Singh - @KritAriGit
-o Mokshagna Gnana Teja Talapaneni - (update gitid)
-o Akhila Myaka - (update gitid)
+- Kritvirya Singh : @KritAriGit
+- Mokshagna Gnana Teja Talapaneni : (update gitid)
+- Akhila Myaka : (update gitid)
 
 🎯 Research Questions
 
@@ -24,13 +24,13 @@ Finance Sector: JPMorgan Chase (JPM), Goldman Sachs (GS)
 
 📂 Project Structure
 
-stock-market-analysis/
-├── data/
-│   ├── raw/         # Raw stock data CSVs
-│   ├── processed/   # Cleaned & transformed data
-├── notebooks/       # Jupyter notebooks for analysis
-├── scripts/         # Data fetching & processing scripts
-├── README.md        # Project documentation
+- stock-market-analysis/
+-- ├── data/
+-- │   ├── raw/         # Raw stock data CSVs
+-- │   ├── processed/   # Cleaned & transformed data
+-- ├── notebooks/       # Jupyter notebooks for analysis
+-- ├── scripts/         # Data fetching & processing scripts
+-- ├── README.md        # Project documentation
 
 🔍 Methods & Approach
 
