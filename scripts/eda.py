@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import os
 
-tickers = ['NVDA', 'AAPL', 'TSLA', 'JPM', 'GS']                                                 #again - tickers = symbols for stocks
+tickers = ['NVDA', 'AAPL', 'TSLA', 'JPM', 'GS']                                                 
 raw_data_path = "data/raw data/"
 
 # Load stock data
