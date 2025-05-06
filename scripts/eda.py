@@ -1,4 +1,3 @@
-#libraries
 
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -8,7 +7,6 @@ import os
 tickers = ['NVDA', 'AAPL', 'TSLA', 'JPM', 'GS']                                                 
 raw_data_path = "data/raw data/"
 
-# Load stock data
 stocks = {}
 for x in tickers:
     file_path = os.path.join(raw_data_path, f"{x}_stock_data.csv")
@@ -16,7 +14,6 @@ for x in tickers:
     if os.path.exists(file_path):
         df = pd.read_csv(file_path, skiprows = 2)                                               # Skipping first two rows, due to csv structure
         
-        # Renaming columns
         df.columns = ['Date', 'Close', 'High', 'Low', 'Open', 'Volume']
         df['Date'] = pd.to_datetime(df['Date'])                                                 # Date to datetime
         df.set_index('Date', inplace = True)                                                    # Date as index
@@ -26,7 +23,6 @@ for x in tickers:
     else:
         print(f"Data file is missing for {x}: {file_path}")
 
-#  stock price trends plot 
 
 plt.figure(figsize = (12, 6))
 
@@ -46,7 +42,3 @@ plt.figure(figsize=(12, 6))
 sns.heatmap(pd.concat({ticker: df.isnull().sum() for ticker, df in stocks.items()}, axis=1), annot=True, cmap = 'coolwarm', cbar = True)
 plt.title("Missing Data Heatmap for All Stocks")
 plt.show()
-
-
-
-# All the scripts need to be properly commented, remove unecessary or excess comments and documented
